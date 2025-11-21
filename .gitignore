@@ -1,0 +1,38 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Django artifacts
+db.sqlite3
+*.log
+*.pot
+*.py,cover
+local_settings.py
+
+# Environment / secrets
+.env
+.env.*
+
+# IDE / tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Coverage / test
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# Static / media (if generated locally)
+staticfiles/
+media/

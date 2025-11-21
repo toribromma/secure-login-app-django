@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><body>
+<h1>Login</h1>
+<form method="post">{% csrf_token %}
+  {{ form.non_field_errors }}
+  {{ form.username.label_tag }} {{ form.username }}<br>
+  {{ form.password.label_tag }} {{ form.password }}<br>
+  <button type="submit">Login</button>
+</form>
+<a href="{% url 'register' %}">Register</a>
+</body></html>
