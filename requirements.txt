@@ -4,3 +4,4 @@ django-axes>=6.0
 django-ratelimit>=3.1
 django-csp>=3.8
 cryptography>=42.0
+python-dotenv>=1.0
