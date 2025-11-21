@@ -99,12 +99,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {'min_length': 12},
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+    {
+        'NAME': 'accounts.validators.ComplexPasswordValidator',
     },
 ]
 
@@ -157,3 +161,7 @@ CSP_STYLE_SRC = ("'self'", "https://unpkg.com")  # if you pull a light CSS lib
 LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "me"
 LOGOUT_REDIRECT_URL = "login"
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "no-reply@example.com"
+PASSWORD_RESET_TIMEOUT = 60 * 60  # 1 hour
